@@ -1,0 +1,20 @@
+{
+    "6": {
+        "nume": "Ivanov",
+        "email": "ivan@gmail.com",
+        "abonat": "Da",
+        "id": "6704dbc01e281"
+    },
+    "9": {
+        "id": "6704ddcdcb515",
+        "nume": "Balaban Daniel",
+        "email": "321@gmail.com",
+        "abonat": "Nu"
+    },
+    "10": {
+        "id": "6704dde888816",
+        "nume": "Zaharov Serghei",
+        "email": "serghei@gmail.com",
+        "abonat": "Nu"
+    }
+}

@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --dark-green: #003329;
+    --light-green: #359381;
+}
+
+body {
+    background: #f9f9f9;
+    max-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 30%;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--light-green);
+    pointer-events: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        background: var(--light-green);
+        padding: 6px 15px;
+        border-radius: 20px;
+        margin: 0 10px;
+        font-weight: 600;
+    }
+
+    a:hover,
+    a.active {
+        background: #fff;
+        color: var(--light-green);
+    }
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+}
+
+#text {
+    position: absolute;
+    font-size: 5rem;
+    margin: 24px;
+    color: #fff;
+    text-shadow: 50px 50px 50px rgba(0, 0, 0, 1);
+    z-index: 3;
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    pointer-events: none;
+}
+
+.parallax-scrolling {
+    position: relative;
+    background: var(--dark-green);
+    padding: 100px;
+    color: #fff;
+    z-index: 4;
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-top: 12px;
+        font-weight: 300;
+    }
+}
+
+/* Strech img to fit into large screen */
+@media screen and (min-width: 1400px) {
+    .parallax {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        width: 100%;
+    }
+
+    .parallax img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+    }
+}
+
+
+/* Compress header, and block the images to a certain height to prevent blank spaces */
+@media screen and (max-width: 800px) {
+    header {
+        padding: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .logo {
+            font-size: 2rem;
+        }
+    }
+
+    .navigation {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        a {
+            color: #fff;
+            background: var(--light-green);
+        }
+
+        a:hover,
+        a.active {
+            background: #fff;
+            color: var(--light-green);
+        }
+    }
+
+    .parallax-scrolling {
+        padding: 24px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 450px) {
+    header {
+        gap: 30%;
+        justify-content: center;
+    }
+
+    .navigation {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+}
